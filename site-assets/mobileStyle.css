@@ -1,0 +1,59 @@
+body {
+  background-color: black;
+}
+
+#inputVideo {
+  position: absolute;
+  z-index: -1;
+  visibility: hidden;
+}
+
+#demo-container {
+/*  width: 100%;
+  height: 100%;*/
+  display: inline-block;
+  /*position: relative;*/
+  overflow: visible;
+  white-space: nowrap;
+}
+
+#inputCanvas, #inputCanvas2 {
+  width: 97%;
+  height: 300px;
+  z-index: 1;
+  float: left;
+}
+
+#doughnut, #doughnut2 {
+  width: 100px;
+  margin: auto;
+  height: 100px;
+  margin-top: 85px;
+  margin-left: 15%;
+  border-radius: 50%;
+  position: absolute;
+  float: right;
+  border: 7px solid white;
+  z-index: 1;
+}
+
+#song-title {
+  position: absolute;
+  width: 50px;
+  height: 0px;
+  z-index: 100;
+  background-color: black;
+  border-radius: 5px;
+  right: 5px;
+  top: 5px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 30px; 
+  opacity: 0;
+  font-family: Lato;
+  font-weight: 700;
+}
+
+#swatch-and-canvas {
+  display: inline-block;
+}
