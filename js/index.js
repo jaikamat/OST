@@ -11,10 +11,9 @@ function init () {
   navigator.getUserMedia = navigator.getUserMedia ||
   navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
 
-
   // ### IMPORTANT: this assumes that the device has only two camera inputs -
   // [0], the user-facing camera and [1], the environment camera
-  // IMPORTANT: This only works with my android tablet
+  // IMPORTANT: This only tested with Samsung Galaxy Note 10.1 2012 edition
   // if (!navigator.enumerateDevices && window.MediaStreamTrack && window.MediaStreamTrack.getSources) {
   //     navigator.enumerateDevices = window.MediaStreamTrack.getSources.bind(window.MediaStreamTrack);
   // }
@@ -27,7 +26,6 @@ function init () {
   // }
 
   if (window.matchMedia('(min-width: 800px)').matches) {
-  /* the viewport is at least 800 pixels wide */
     navigator.mediaDevices.enumerateDevices()
     .then(function (devices) {
       devicesArray = devices.filter(function (element) {
@@ -39,7 +37,6 @@ function init () {
       })
       videosrctext.textContent = text;
 
-      // constraints.video = { optional: [{ sourceId: devicesArray[0].deviceId }] };
       constraints.video = { mandatory: { sourceId: devicesArray[0].deviceId } };
 
       console.log("VIDEO CONSTRAINTS", constraints.video);
@@ -93,7 +90,6 @@ function init () {
     });
   }
 };
-
 
 function getFromEchoNest (genre, min_energy, max_energy, numSongs) {
   console.log('MAKING ECHO NEST CALL');
@@ -240,4 +236,3 @@ window.onload = function () {
   // JQuery Mobile detects if the window supports tap or click
   var tapOrClick = $.support.touch ? "tap" : "click";
 }
-
