@@ -6,4 +6,4 @@ Appropriate music. Lessons were learned about GetUserMedia, and the experimental
 to device. Enable chrome://flags for experimental web technology and, if running on an Android device, disable user touch 
 to play audio programmatically. 
 
-In order for the mobile functionality of the app to work, expose a local tunnel to your localhost via ngrok or lt, and serve the page up over https (grabbing camera data over http is disabled in updated versions of chrome).
+In order for the mobile functionality of the app to work, expose a local tunnel to your localhost via ngrok or lt, and point your mobile device's borwser to the https link (grabbing camera data over http is disabled in updated versions of chrome).
