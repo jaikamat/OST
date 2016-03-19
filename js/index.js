@@ -143,36 +143,6 @@ function timerCallback () {
 
     var avgHSL = averageHSL(this.HSLdata);
 
-    // if the sat is 20 pts greater than average hsl sat
-    // store the average
-    // then start pushing to new array instead
-    // if the new array's length is 3 and the average is still greater than 20
-    // clear the array and set it equal to []
-    // resume tracking on the old array
-
-    // var currentSat = this.HSLdata[this.hslData.length - 1][1];
-    // var averageSat = averageHSL(this.HSLdata)[1];
-
-    // if ((currentSat - averageSat) > 20) {
-    //   // set a global average to this previous average
-    //   // if the current average is still 20 points higher than that after 1 second (using count)
-    //   // then print a message
-    //   this.previousHSL = averageSat;
-    //   if (this.timeCount > 25) {
-    //     console.log("GIANT BLEEPING SATURATION SHIFT");
-    //     this.timeCount = 0;
-    //     this.previousHSL = null;  
-    //   }
-
-    //   var avgHSL = averageHSL(this.HSLdata);
-    //   this.testArray.push(hsl);
-    //   if (this.testArray) {
-
-    //   }
-    //   // here test for sudden changes, otherwise
-    //   // make constant calls using average data when songs end
-    // }
-
     if (this.audio.paused && this.makeCall) {
       this.makeCall = false;
       console.log('music is not playing!');
