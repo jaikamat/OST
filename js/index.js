@@ -6,7 +6,6 @@
 function init () {
   var videoSource = null;
   var devicesArray = null;
-  var text = "NONNONON";
   var constraints = {};
 
   navigator.getUserMedia = navigator.getUserMedia ||
